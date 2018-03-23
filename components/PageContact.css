@@ -1,0 +1,79 @@
+.page-contact {
+    /* height: 30vh; */
+    position: relative;
+   display: block;
+   /* justify-content: space-between; */
+   
+}
+@media only screen and (min-width: 768px) {
+    .page-contact {
+        height: 100vh;
+    }
+}
+
+.footer-list {
+    display: none;
+    /* display: flex; */
+    justify-content: space-evenly;
+    width: 100%;
+    /* padding: 16px 0; */
+    /* margin-bottom: 16px; */
+    border-bottom: 1px solid rgba(250, 250, 250, .2);
+    padding: 16px;
+    
+}
+.footer-item {
+    font-family: 'Jura', sans-serif;
+    text-transform: capitalize;
+}
+.contact {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   padding: 16px ;
+}
+
+.icon {
+    font-size: 1.7rem;
+    margin: 0 4px;
+    cursor: pointer;
+}
+.icon-link {
+    color: inherit;
+    display: inline;
+    margin: 0 12px;
+}
+.copy-mail {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    font-size: .8rem;
+}
+.copy-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* cursor: pointer; */
+}
+.copy-sub {
+    font-size: .8rem;
+}
+
+.mail, .copy-success-message {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    margin-right: 8px;
+
+}
+.copy-success {
+    display: none;
+}
+.copy-success-message {
+    display: block;
+  
+}

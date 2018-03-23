@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Jura:300,400,700|Lato:300,400,700,800|Montserrat:500,700,800,900|Roboto:400,700,800|Raleway:300,400,700,800,900");
+
+:root {
+  --text-dark: rgba(37, 37, 37, 1);
+  --text-dark-3: rgba(37, 37, 37, 0.3);
+  --text-dark-5: rgba(37, 37, 37, 0.5);
+  --text-dark-8: rgba(37, 37, 37, 0.8);
+  --text-white: rgba(250, 250, 250, 0.9);
+  --bg-grey: rgba(224, 224, 225, 1);
+  --app-color: rgba(42, 157, 143, 1);
+  --font-header: "Jura", sans-serif;
+  --font-title: "Raleway", sans-serif;
+  --font-text: "Lato", sans-serif;
+  --font-weight-l: 300;
+  --font-weight-n: 400;
+  --font-weigth-b: 900;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+body,
+main,
+section,
+article,
+div,
+ul,
+li,
+a {
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+h1,
+h4 {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+h5 {
+  font-family: var(--font-header);
+  font-weight: 300;
+}
+p {
+  font-family: var(--font-text);
+  font-weight: 300;
+  text-transform: inherit;
+}
+html,
+body {
+
+  height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  html, body {
+    font-size: 18px;
+  }
+}
+a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+input {
+  display: block;
+}
+.page-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  width: 100%;
+  padding: 16px;
+}
+.page-blue {
+  background-color: var(--app-color);
+  color: var(--text-white);
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-fixed {
+    position: fixed;
+    width: 50%;
+  }
+  .section-scroll {
+    position: absolute;
+    width: 50%;
+    right: 0;
+
+  }
+}
