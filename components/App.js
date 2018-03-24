@@ -1,23 +1,25 @@
 import React from "react";
 import { hot } from "react-hot-loader";
 import "./App.css";
-import Page from "./Page";
+import PageDev from "./PageDev";
+import PageApp from "./PageApp";
+import PageSkills from "./PageSkills";
+import PageContact from "./PageContact";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     return (
       <main>
         <div className="section-fixed">
-          <Page content="dev" />
+          <PageDev />
         </div>
         <div className="section-scroll">
-          <Page content="skills" />
-          <Page content="app" />
-          <Page content="contact" />
+          <PageSkills />
+          <PageApp />
+          <PageContact />
         </div>
       </main>
     );

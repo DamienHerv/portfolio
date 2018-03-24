@@ -1,29 +1,20 @@
 import React from "react";
 import "./PageApp.css";
-// import '../assets/images/screenshot-mobile-portrait.jpg'
 
 export default class PageApp extends React.Component {
   constructor(props) {
     super(props);
   }
-  handelClick(id) {
-    let element = document.getElementById(id);
-    if (id === "mobile") {
-      element.nextSibling.classList.remove("page-app-active");
-      element.nextSibling.nextSibling.classList.remove("page-app-active");
-    } else if (id === 'desktop') {
-      element.nextSibling.classList.remove("page-app-active");
-      element.previousSibling.classList.remove("page-app-active");
-    } else {
-      element.previousSibling.classList.remove("page-app-active");
-      element.previousSibling.previousSibling.classList.remove("page-app-active");
-    }
-    element.classList.add("page-app-active");
+  handelLinkClick(id) {
+    let currentElement = document.getElementById(id);
+    let imageLinks = document.querySelectorAll(".page-app-link");
+    imageLinks.forEach(link => link.classList.remove("page-app-active"));
+    currentElement.classList.add("page-app-active");
   }
 
   render() {
     return (
-      <div className="page page-app">
+      <div className="page page-b">
         <h5 className="page-title">web apps</h5>
         <div className="page-app-container">
           <a
@@ -33,13 +24,13 @@ export default class PageApp extends React.Component {
           >
             <img
               className="page-app-image mobile-portrait"
-              src={require("../assets/images/screenshot-mobile-portrait.jpg")}
-              alt="watchers app mobile screenshot"
+              src={require("../build/images/screenshot-mobile-portrait.jpg")}
+              alt="'watchers' mobile screenshot"
             />
             <img
               className="page-app-image mobile-landscape"
-              src={require("../assets/images/screenshot-mobile-landscape-2.png")}
-              alt="watchers app mobile screenshot"
+              src={require("../build/images/screenshot-mobile-landscape.jpg")}
+              alt="'watchers' mobile screenshot"
             />
           </a>
           <a
@@ -49,24 +40,36 @@ export default class PageApp extends React.Component {
           >
             <img
               className="page-app-image"
-              src={require("../assets/images/screenshot-desktop.png")}
-              alt="watchers app mobile screenshot"
+              src={require("../build/images/screenshot-desktop.jpg")}
+              alt="'watchers' desktop screenshot"
             />
           </a>
           <div id="description" className="page-app-link page-app-description">
-            A movie web application that shows you which movies you can watch right now at home
+            'Watchers' - A movie web application that displays movies currently available online.
           </div>
-          </div>
-          <div className="page-app-controls">
-            <span className="control ctrl-click" onClick={() => this.handelClick("mobile")}>mobile</span>
-            <span className="control">|</span>
-            <span className="control ctrl-click" onClick={() => this.handelClick("desktop")}>desktop</span>
-            <span className="control">|</span>
-            <span className="control ctrl-click" onClick={() => this.handelClick("description")}>description</span>
-            
-           
-          </div>
-        
+        </div>
+        <div className="page-app-controls">
+          <span
+            className="control ctrl-click"
+            onClick={() => this.handelLinkClick("mobile")}
+          >
+            mobile
+          </span>
+          <span className="control">|</span>
+          <span
+            className="control ctrl-click"
+            onClick={() => this.handelLinkClick("desktop")}
+          >
+            desktop
+          </span>
+          <span className="control">|</span>
+          <span
+            className="control ctrl-click"
+            onClick={() => this.handelLinkClick("description")}
+          >
+            description
+          </span>
+        </div>
       </div>
     );
   }

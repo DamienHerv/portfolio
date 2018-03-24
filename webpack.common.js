@@ -21,6 +21,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         // include: paths.appSrc,
+        exclude: /node_modules/,
         loader: require.resolve("babel-loader"),
         options: {
           // This is a feature of `babel-loader` for Webpack (not Babel itself).

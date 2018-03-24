@@ -1,11 +1,18 @@
-const app = require('./index')
+const app = require("./index");
+console.log(process.env.NODE_ENV)
+if (process.env.NODE_ENV !== "production") {
+  
 
-const webpack = require('webpack');
-const webpackConfig = require('../webpack.dev');
-const compiler = webpack(webpackConfig);
+  const webpack = require("webpack");
+  const webpackConfig = require("../webpack.dev");
+  const compiler = webpack(webpackConfig);
 
-// Webpack
-app.use(require("webpack-dev-middleware")(compiler, {
-    noInfo: true, publicPath: webpackConfig.output.publicPath
-}));
-app.use(require("webpack-hot-middleware")(compiler));
+  // Webpack
+  app.use(
+    require("webpack-dev-middleware")(compiler, {
+      noInfo: true,
+      publicPath: webpackConfig.output.publicPath
+    })
+  );
+  app.use(require("webpack-hot-middleware")(compiler));
+}
