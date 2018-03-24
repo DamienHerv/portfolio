@@ -9,7 +9,7 @@ const app = express();
 
 // Static
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("public"), { maxAge: 24 * 60 * 60 * 1000 });
+  app.use(express.static("public", { maxAge: 24 * 60 * 60 * 1000 }));
 } else {
   app.use(express.static("public"));
 }
