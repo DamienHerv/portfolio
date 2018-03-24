@@ -6,7 +6,7 @@ yarn-error.log*
 #dependency directories
 
 /node_modules
-/assets
+/assets/images
 
 #gulp
 gulpfile.js*
