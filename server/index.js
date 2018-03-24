@@ -8,11 +8,7 @@ let port = process.env.PORT || default_port;
 const app = express();
 
 // Static
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("public"), { maxAge: 24 * 60 * 60 * 1000 });
-} else {
-  app.use(express.static("public"));
-}
+app.use(express.static("public"), { maxAge: 24 * 60 * 60 * 1000 });
 
 // Pdf
 app.get("/getpdf", (req, res) => {
