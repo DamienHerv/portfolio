@@ -44,8 +44,6 @@
   transform: translateX(0);
 }
 .page-app-image {
-  /* display: none; */
-
   box-shadow: 0 0 10px 2px var(--text-dark);
   border-radius: 5px;
 }
@@ -54,7 +52,6 @@
   font-size: 1.2rem;
   font-style: italic;
   font-weight: 300;
-  /* text-align: justify; */
 }
 
 .page-app-controls {
@@ -75,7 +72,7 @@
 }
 @media only screen and (min-width: 768px) {
   .page-app-controls {
-    bottom: 56px;
+    bottom: 32px;
   }
 }
 .control {
