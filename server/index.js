@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 
 // Port
 const default_port = 4000;
@@ -8,12 +8,16 @@ let port = process.env.PORT || default_port;
 const app = express();
 
 // Static
-app.use(express.static('public'));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("public", { maxAge: 24 * 60 * 60 * 1000 }));
+} else {
+  app.use(express.static("public"));
+}
 
 // Pdf
-app.get('/getpdf', (req, res) => {
-    res.download('./assets/resume.pdf', 'resume.pdf')
-})
+app.get("/getpdf", (req, res) => {
+  res.download("./assets/Damien Hervieux - Resume 2018.pdf", "Damien Hervieux - Resume 2018.pdf");
+});
 // Listen
 app.listen(port, () => console.log(`listening to ${port}`));
 

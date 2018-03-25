@@ -45,7 +45,7 @@ export default class PageApp extends React.Component {
             />
           </a>
           <div id="description" className="page-app-link page-app-description">
-            'Watchers' - A movie web application that displays movies currently available online.
+            'Watchers' is a movie web application that displays movies currently available online.
           </div>
         </div>
         <div className="page-app-controls">
