@@ -10,12 +10,10 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* margin: 32px; */
-  padding: 32px;
+  padding: 1em;
   position: relative;
   overflow: hidden;
 }
-
 .page-app-link {
   max-width: 85%;
   display: flex;
@@ -62,7 +60,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-wrap: wrap; */
   width: 80%;
   text-align: center;
   font-family: "Jura", sans-serif;

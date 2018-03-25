@@ -1,8 +1,6 @@
 const app = require("./index");
-console.log(process.env.NODE_ENV)
-if (process.env.NODE_ENV !== "production") {
-  
 
+if (process.env.NODE_ENV !== "production") {
   const webpack = require("webpack");
   const webpackConfig = require("../webpack.dev");
   const compiler = webpack(webpackConfig);

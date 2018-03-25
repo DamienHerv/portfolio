@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Pdf
 app.get("/getpdf", (req, res) => {
-  res.download("./assets/resume.pdf", "resume.pdf");
+  res.download("./assets/Damien Hervieux - Resume 2018.pdf", "Damien Hervieux - Resume 2018.pdf");
 });
 // Listen
 app.listen(port, () => console.log(`listening to ${port}`));

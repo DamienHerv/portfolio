@@ -49,7 +49,7 @@ export default class PageDev extends React.Component {
           <div className="resume-icon" onClick={() => this.handleDownload()}>
             <i className="fas fa-download" />
           </div>
-          <a className="resume-icon" href={require("../assets/resume.pdf")}>
+          <a className="resume-icon" href={require("../assets/Damien Hervieux - Resume 2018.pdf")}>
             <i className="fas fa-external-link-alt" />
           </a>
         </div>
