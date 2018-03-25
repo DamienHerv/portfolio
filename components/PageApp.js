@@ -20,7 +20,7 @@ export default class PageApp extends React.Component {
           <a
             id="mobile"
             className="page-app-link page-app-active"
-            href="https://frozen-wildwood-81102.herokuapp.com"
+            href="https://watchers-beta.herokuapp.com"
           >
             <img
               className="page-app-image mobile-portrait"
@@ -36,7 +36,7 @@ export default class PageApp extends React.Component {
           <a
             id="desktop"
             className="page-app-link"
-            href="https://frozen-wildwood-81102.herokuapp.com"
+            href="https://watchers-beta.herokuapp.com"
           >
             <img
               className="page-app-image"
