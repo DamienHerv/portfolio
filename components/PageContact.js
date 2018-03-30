@@ -17,7 +17,7 @@ export default class PageContact extends React.Component {
       mail.classList.remove("copy-success");
       mail.nextSibling.classList.remove("copy-success-message");
     }, 1150);
-  } 
+  }
   render() {
     return (
       <footer className="page page-a">
@@ -33,13 +33,15 @@ export default class PageContact extends React.Component {
             >
               <i className="fab fa-linkedin" />
             </a>
-            <a className="contact-link" href="mailto:email">
+            <a className="contact-link" href="mailto:dh@damienhervieux.com">
               <i className="fas fa-envelope" />
             </a>
           </div>
           <div className="copy-mail-container">
-            <span className="copy-mail">dh@damienhervieux.com</span>
-            <span className="copy-success">copied!</span>
+            <div className="copy-message-container">
+              <span className="copy-mail">dh@damienhervieux.com</span>
+              <span className="copy-success">copied!</span>
+            </div>
             <div
               className="copy-icon"
               data-clipboard-text="dh@damienhervieux.com"

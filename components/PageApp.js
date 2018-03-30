@@ -21,6 +21,7 @@ export default class PageApp extends React.Component {
             id="mobile"
             className="page-app-link page-app-active"
             href="https://watchers-beta.herokuapp.com"
+            target="blank"
           >
             <img
               className="page-app-image mobile-portrait"
@@ -37,6 +38,7 @@ export default class PageApp extends React.Component {
             id="desktop"
             className="page-app-link"
             href="https://watchers-beta.herokuapp.com"
+            target="blank"
           >
             <img
               className="page-app-image"

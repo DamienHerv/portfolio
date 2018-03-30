@@ -17,7 +17,6 @@
   cursor: pointer;
 }
 .copy-mail-container {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,9 +28,13 @@
   padding: 0 4px;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: all .5s ease-out;
 }
 .copy-sub {
   font-size: 0.8rem;
+}
+.copy-message-container {
+  position: relative;
 }
 .copy-mail,
 .copy-success-message {
@@ -39,8 +42,14 @@
   margin-right: 8px;
 }
 .copy-success {
-  display: none;
+  position: absolute;
+  left: 0;
+  opacity: 0;
 }
 .copy-success-message {
+  position: relative;
+  opacity: 1;
   display: block;
+  text-align: right;
+  transition: opacity .3s ease-out;
 }
