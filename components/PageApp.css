@@ -111,3 +111,9 @@
     bottom: -8px;
   }
 }
+
+@media only screen and (min-width: 1250px) {
+  #desktop {
+    width: 60%;
+  }
+}
